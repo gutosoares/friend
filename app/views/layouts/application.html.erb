@@ -12,7 +12,7 @@
 <body>
   <nav class="teal lighten-2" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo logo">FriendX</a>
+      <%= link_to "FriendX", root_path, class: "brand-logo logo", id: "logo-container" %>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
