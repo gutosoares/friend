@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1>FriendX - List of Groups</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <% @groups.each do |group| %>
+        <div class="card">
+          <div class="card-content">
+            <h3><%= group.name %></h3>
+          </div>
+          <div class="card-action">
+            <%= link_to 'Show', group %>
+            <%= link_to 'Edit', edit_group_path(group) %>
+            <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
-<h1>Listing Groups</h1>
+  <%= link_to 'New Group', new_group_path, class: "btn" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Group', new_group_path %>
+</div>
