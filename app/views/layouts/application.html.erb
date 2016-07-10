@@ -15,6 +15,7 @@
       <%= link_to "FriendX", root_path, class: "brand-logo logo", id: "logo-container" %>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
+          <li><%= link_to "Groups", groups_path %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
           <li><%= link_to "Perfil", edit_user_registration_path %></li>
         <% else %>
@@ -25,6 +26,7 @@
 
       <ul id="nav-mobile" class="side-nav">
         <% if user_signed_in? %>
+          <li><%= link_to "Groups", groups_path %></li>
           <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
           <li><%= link_to "Perfil", edit_user_registration_path %></li>
         <% else %>
@@ -52,25 +54,23 @@
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Sitemap</a></li>
+            <li><a class="white-text" href="#!">Contact Us</a></li>
+            <li><a class="white-text" href="#!">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Contact Us</a></li>
+            <li><a class="white-text" href="#!">About Us</a></li>
+            <li><a class="white-text" href="#!">Corporate Responsibility</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
+      <div class="container center-align">
       Made by <span class="brown-text text-lighten-3"> Augusto Soares</span>
       </div>
     </div>
