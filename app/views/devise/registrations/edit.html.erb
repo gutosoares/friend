@@ -15,6 +15,11 @@
                 </div>
 
                 <div class="input-field">
+                  <%= f.label :group %>
+                  <%= f.collection_select(:group_id, Group.all, :id, :name, prompt: true) %>
+                </div>
+
+                <div class="input-field">
                   <%= f.label :email %>
                   <%= f.email_field :email, autofocus: true, class: "validate" %>
                 </div>

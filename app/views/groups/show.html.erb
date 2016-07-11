@@ -7,6 +7,7 @@
         <div class="card-content">
             <h4>Name:</h4>
             <h6><%= @group.name %></h6>
+            <h6><%= @group.user.name %></h6>
         </div>
         <div class="card-action">
           <%= link_to 'Edit', edit_group_path(@group) %>
