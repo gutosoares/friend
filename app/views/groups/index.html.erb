@@ -15,6 +15,10 @@
               <% group.user.each do |u| %>
                 <li class="collection-item">
                   <%= u.name %>
+                  <span class="user-email"><%= u.email %><span>
+                  <%= link_to edit_user_registration_path, class: "secondary-content", title: "Message" do %>
+                    <i class="material-icons">add</i>
+                  <% end %>
                 </li>
               <% end %>
             </ul>
