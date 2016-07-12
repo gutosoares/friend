@@ -15,8 +15,8 @@
               </div>
 
               <div class="input-field">
-                <%= f.label :Group %>
-                <%= collection_select(:user, :group_id, Group.all, :id, :name, prompt: true) %>
+                <%= f.collection_select(:group_id, Group.all, :id, :name, prompt: true) %>
+                <%= f.label :group %>
               </div>
 
               <div class="input-field">
