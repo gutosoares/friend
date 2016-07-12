@@ -13,9 +13,11 @@
             <h3><%= group.name %></h3>
             <ul class="collection">
               <% group.user.each do |u| %>
-                <li class="collection-item">
-                  <%= u.name %>
-                  <span class="user-email"><%= u.email %><span>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle teal lighten-2">account_circle</i>
+                  <!-- <img src="images/yuna.jpg" alt="" class="circle"> -->
+                  <span class="title"><%= u.name %></span>
+                  <p class="user-email"><%= u.email %></p>
                   <%= link_to edit_user_registration_path, class: "secondary-content", title: "Message" do %>
                     <i class="material-icons">add</i>
                   <% end %>
