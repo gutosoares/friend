@@ -14,6 +14,7 @@
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require pace
 //= require_tree .
 
 (function($){
