@@ -13,10 +13,10 @@
                   <%= f.label :name %>
                   <%= f.text_field :name, autofocus: true, class: "validate" %>
                 </div>
-                
+
                 <div class="input-field">
+                  <%= f.collection_select(:group_id, Group.all, :id, :name, :prompt => true) %>
                   <%= f.label :group %>
-                  <%= collection_select(:user, :group_id, Group.all, :id, :name, :prompt => true) %>
                 </div>
 
                 <div class="input-field">
@@ -43,7 +43,6 @@
                   <%= f.password_field :current_password, autocomplete: "off", placeholder: "we need your current password to confirm your changes" %>
                 </div>
 
-
                 <div class="actions">
                   <%= f.submit "Update", class: "btn" %>
                 </div>
@@ -67,3 +66,9 @@
     <%= link_to "Back", :back, class: "btn" %>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+     $('select').material_select();
+   });
+</script>

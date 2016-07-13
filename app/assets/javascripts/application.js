@@ -14,6 +14,7 @@
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require pace
 //= require_tree .
 
 (function($){
@@ -24,3 +25,7 @@
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
+$(document).ready(function() {
+   $('select').material_select();
+ });

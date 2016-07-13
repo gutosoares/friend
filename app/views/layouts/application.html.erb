@@ -4,39 +4,42 @@
   <title>Friend</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.png', rel: 'shortcut icon', type: 'image/png' %>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
   <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 </head>
 <body>
-  <nav class="teal lighten-2" role="navigation">
-    <div class="nav-wrapper container">
-      <%= link_to "FriendX", root_path, class: "brand-logo logo", id: "logo-container" %>
-      <ul class="right hide-on-med-and-down">
-        <% if user_signed_in? %>
-          <li><%= link_to "Groups", groups_path %></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to "Perfil", edit_user_registration_path %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <% end %>
-      </ul>
+  <div class="navbar-fixed">
+    <nav class="teal lighten-2" role="navigation">
+      <div class="nav-wrapper container">
+        <%= link_to "FriendX", root_path, class: "brand-logo logo", id: "logo-container" %>
+        <ul class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+            <li><%= link_to "Groups", groups_path %></li>
+            <li><%= link_to "Perfil", edit_user_registration_path %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <% if user_signed_in? %>
-          <li><%= link_to "Groups", groups_path %></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-          <li><%= link_to "Perfil", edit_user_registration_path %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <% end %>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+        <ul id="nav-mobile" class="side-nav">
+          <% if user_signed_in? %>
+            <li><%= link_to "Groups", groups_path %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+            <li><%= link_to "Perfil", edit_user_registration_path %></li>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
@@ -48,7 +51,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis adipisci molestias, maiores similique autem quis aliquam dolore esse sapiente sequi nemo quos obcaecati, ex fuga architecto illum quia mollitia dolorum.</p>
 
         </div>
         <div class="col l3 s12">
